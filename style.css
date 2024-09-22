@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=EB+Garamond:ital,wght@0,674;1,674&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&family=Viga&display=swap');
+
+body {
+ background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-family: 'Merriweather', sans-serif;
+}
+
+nav ul li {
+    padding: 0px 15px;
+}
+
+nav ul li:hover {
+    color: rgba(30,215,96,255);
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 70px;
+    background-color: black;
+    color: white;
+
+}
+
+.brand img {
+    width: 180px;
+}
+
+.nav-first {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-second {
+    display: flex;
+    align-items: center;
+}
+
+/* Cover */
+
+#cover {
+    width: 68%;;
+    position: relative;
+    left: 37px;
+}
+
+/* songitem */
+
+.songItem {
+   height: 50px;
+   display: flex;
+   background-image: linear-gradient(white,rgba(205,120,139,255));
+   width: 94%;
+   color: black;
+   align-items: center;
+   justify-content: space-between;
+   border-radius: 12px;
+   margin: 15px 0;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-weight: 600;
+
+}
+
+.songItem img {
+    width: 45px;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.timestamp {
+    margin: 0 18px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+
+/* Bottom */
+
+.container {
+    min-height: 59vh;
+    background-image: linear-gradient(black,rgba(205,120,139,255));
+    color: white;
+    font-family: 'Audiowide',sans-serif;
+    display: flex;
+    width: 75%;
+    margin: 23px auto;
+    border-radius: 12px;
+    padding:34px;
+}
+
+.bottom {
+    position: sticky;
+    height: 100px;
+    color: white;
+    background-color: black;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shuffle {
+    bottom: 1vw;
+    left: 41vw;
+    position: absolute;
+}
+
+.shuffle i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.shuffle i:hover {
+    color: rgba(30,215,96,255);
+    font-size: 34px;
+
+}
+
+.shuffle i.active {
+    color: rgba(30, 215, 96, 255); /* Color when shuffle is active */
+}
+
+/* Heart Icon */
+.heart {
+    position: absolute;
+    right: 41vw;
+    bottom: 1vw;
+}
+
+.heart i {
+    cursor: pointer;
+    color: white; /* Default color */
+    transition: color 0.3s ease;
+}
+
+.heart i:hover {
+    font-size: 34px;
+}
+
+/* Default state (filled heart) */
+.heart i.fa-heart {
+    color: white; /* Default color for filled heart */
+}
+
+
+
+
+.icon {
+    margin-top: 5px;
+}
+
+.icon i {
+    cursor: pointer;
+    
+}
+
+#pg-bar {
+    
+    position: relative;
+    width: 80vw;
+    cursor: pointer;
+
+}
+
+.songinfo {
+    font-size: 18px;
+    bottom:26px;
+    position: absolute;
+    left: 15vw;
+}
+
+.songinfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+#timeDisplay {
+    position: relative;
+    top: 5px;
+    color: white; /* Adjust color as needed */
+    font-family: 'Merriweather', sans-serif; /* Match your font */
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center horizontally */
+}
+
+#currentTime, #totalDuration {
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+@media (min-width: 1024px) and (max-width:1439px) {
+
+    .songlist h1 {
+        font-size: 24px;
+    }
+
+    #cover {
+    top: 188px;
+    height: 555px;
+    position: relative;
+    left: 17px;
+    }
+
+    .songItem {
+        width: 106%;
+    }
+
+    .songlist {
+        position: relative;
+        right: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1023px) {
+    .songlist h1 {
+        font-size: 40px;
+    }
+
+    #cover {
+    display: none;
+    }
+
+    .songItem {
+        width: 100%;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .songlist {
+        position: relative;
+        right: 10px;
+    }
+
+    .heart {
+        position: absolute;
+        right: 37vw;
+        bottom: 2vw;
+    }
+
+    .shuffle {
+          position: absolute;
+          left:  37vw;
+          bottom: 2vw;
+    }
+}
+
+
